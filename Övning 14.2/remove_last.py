@@ -17,5 +17,8 @@ print("Antal element i listan:", len(list)) #len(x) gets number of elements in l
 for i in range(len(list)): #range(x) returns a list of integers from 0 to x
 	print("Sista värdet i listan:", list[len(list)-1])  #list[x] returns element x in list
 	print("Tog bort sista värdet i listan: ", list.pop()) # list.pop() removes and returns the last element in list
+	
+#more on range
+#http://pythoncentral.io/pythons-range-function-explained/
 
 

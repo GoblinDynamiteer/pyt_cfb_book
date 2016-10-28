@@ -10,13 +10,12 @@ primes = []
 i = 2 #to check if prime number
 n = 0 #counter for prime numbers stored in list
 while not (n == 50): #loops until n reaches 50 (amounts of prime numbers to store in list)
-	notprime = 0
 	for x in range(2,(i-1)):
 		if(i % x) == 0: #checks if modulus of i (number to check) and x (range from 2 to i-1) is zero
-			notprime = 1 #not very good solution..
-	if (notprime == 0):
-		primes.append(i) #appends number i to list, i is a prime number
-		n += 1 #as n++, doesnt seem to work in python?
+			i += 1 #i is not prime number, increase by 1 and reset loop
+			continue #breaks and does next loop in for
+	primes.append(i) #appends number i to list, i is a prime number
+	n += 1 #as n++, doesnt seem to work in python?
 	i += 1 #i++
 
 for i in range(0, len(primes)):	#prints values in list
